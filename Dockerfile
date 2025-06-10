@@ -24,6 +24,8 @@ RUN apk update && apk add --no-cache \
 # Install pip dependencies
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+RUN pip3 install --upgrade yt-dlp
+
 # Clean up build dependencies
 RUN apk del .build-deps
 
